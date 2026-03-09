@@ -217,21 +217,21 @@ if __name__ == "__main__":
     # EXPERIMENT 1 - Baseline
     # Run as-is. Do NOT change any parameters here.
     # ==========================================================================
-    print("=" * 48)
-    print("  EXPERIMENT 1 - Baseline")
-    print("=" * 48)
+    #print("=" * 48)
+    #print("  EXPERIMENT 1 - Baseline")
+    #print("=" * 48)
 
-    best_chr, best_val, val_log = run_ga(
-        population_size=20, generations=50,
-        crossover_rate=0.8, mutation_rate=0.05,
-        tournament_size=3, seed=42
-    )
-    print_solution(best_chr)
-    print(f"  Generations run : {len(val_log)}")
-    print(f"  Value at gen 1  : {val_log[0]}")
-    print(f"  Final best value: {best_val}")
-    save_plot(val_log, "plots/experiment_1.png",
-              "Baseline  mutation_rate=0.05")
+    #best_chr, best_val, val_log = run_ga(
+    #    population_size=20, generations=50,
+    #    crossover_rate=0.8, mutation_rate=0.05,
+     #   tournament_size=3, seed=42
+   # )
+    #print_solution(best_chr)
+    #print(f"  Generations run : {len(val_log)}")
+    #print(f"  Value at gen 1  : {val_log[0]}")
+    #print(f"  Final best value: {best_val}")
+    #save_plot(val_log, "plots/experiment_1.png",
+     #         "Baseline  mutation_rate=0.05")
 
     # ==========================================================================
     # EXPERIMENT 2 - Effect of Mutation Rate
@@ -242,11 +242,33 @@ if __name__ == "__main__":
 
     # --- Copy and edit below this line ---
 
-    # chr2, val2, vl2 = run_ga(
-    #     population_size=20, generations=50,
-    #     crossover_rate=0.8, mutation_rate=0.01,    # <- change this
-    #     tournament_size=3, seed=42
-    # )
-    # print_solution(chr2)
-    # print(f"  Final best value: {val2}")
-    # save_plot(vl2, "plots/experiment_2a.png", "mutation_rate=0.01")   # <- change filename
+     chr2, val2, vl2 = run_ga(
+         population_size=20, generations=50,
+         crossover_rate=0.8, mutation_rate=0.01,    # <- change this
+         tournament_size=3, seed=42
+     )
+     print_solution(chr2)
+     print(f"  Final best value: {val2}")
+     save_plot(vl2, "plots/experiment_2a.png", "mutation_rate=0.01")   # <- change filename
+
+     #---------------------------
+
+     chr2, val2, vl2 = run_ga(
+         population_size=20, generations=50,
+         crossover_rate=0.8, mutation_rate=0.05,    # <- change this
+         tournament_size=3, seed=42
+     )
+     print_solution(chr2)
+     print(f"  Final best value: {val2}")
+     save_plot(vl2, "plots/experiment_2b.png", "mutation_rate=0.05")   # <- change filename
+
+     #----------------------------------
+
+     chr2, val2, vl2 = run_ga(
+         population_size=20, generations=50,
+         crossover_rate=0.8, mutation_rate=0.30,    # <- change this
+         tournament_size=3, seed=42
+     )
+     print_solution(chr2)
+     print(f"  Final best value: {val2}")
+     save_plot(vl2, "plots/experiment_2c.png", "mutation_rate=0.30")   # <- change filename
