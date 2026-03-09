@@ -22,15 +22,12 @@ Open `ga_knapsack.py` and read through it. Then answer these questions.
 
 **Q1. What does the `fitness()` function return? Why does an overweight solution score 0?**
 
-```
-[ YOUR ANSWER — 2 to 3 sentences ]
-```
+
+The fitness() function returns the total value of selected items. If the total weight exceeds the knapsack capacity, it returns 0 to penalize invalid solutions.
 
 **Q2. What does `tournament_select()` do? Why are higher-fitness individuals more likely to be chosen?**
 
-```
-[ YOUR ANSWER — 2 to 3 sentences ]
-```
+tournament_select() chooses one individual from a small random group of individuals in the population. The individual with the highest fitness in that group is selected, so better solutions have a higher chance of being chosen.
 
 **Q3. Look at the `run_ga()` loop. Find this line:**
 ```python
@@ -38,9 +35,7 @@ next_gen = [best_chromosome[:]]
 ```
 **What is this doing? Why is it important to always keep the best solution?**
 
-```
-[ YOUR ANSWER — 2 to 3 sentences ]
-```
+This line copies the best chromosome from the current generation into the next generation. This technique is called elitism. It is important because it preserves the best solution found so far and prevents it from being lost during crossover or mutation.
 
 ---
 
