@@ -250,9 +250,7 @@ if __name__ == "__main__":
      print_solution(chr2)
      print(f"  Final best value: {val2}")
      save_plot(vl2, "plots/experiment_2a.png", "mutation_rate=0.01")   # <- change filename
-
-     #---------------------------
-
+     
      chr2, val2, vl2 = run_ga(
          population_size=20, generations=50,
          crossover_rate=0.8, mutation_rate=0.05,    # <- change this
@@ -262,7 +260,6 @@ if __name__ == "__main__":
      print(f"  Final best value: {val2}")
      save_plot(vl2, "plots/experiment_2b.png", "mutation_rate=0.05")   # <- change filename
 
-     #----------------------------------
 
      chr2, val2, vl2 = run_ga(
          population_size=20, generations=50,
